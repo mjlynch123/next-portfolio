@@ -1,0 +1,26 @@
+<html>
+  <body>
+    <div class="main">
+      <div class="name">
+        <h1>{{inquiry.dataValues.name}}</h1>
+      </div>
+      <div class="email">
+        <h6>Email:
+          <a
+            href="mailto:{{inquiry.dataValues.email}}"
+          >{{inquiry.dataValues.email}}</a>
+        </h6>
+      </div>
+
+      <div class="message">
+        <p>{{inquiry.dataValues.message}}</p>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <form action="/delete/{{inquiry.dataValues.id}}" method="post">
+        <button type="submit">Delete</button>
+      </form>
+    </div>
+  </body>
+</html>

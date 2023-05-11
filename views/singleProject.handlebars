@@ -1,0 +1,35 @@
+<html>
+  <body>
+    <div class="main-area">
+      <div class="image">
+        <img src="{{project.dataValues.image}}" alt="" />
+      </div>
+
+      <div class="description">
+        <h4>{{project.dataValues.name}}</h4>
+        <br>
+        <a href="{{project.dataValues.github_link}}" target="_blank" class="link">Github Repo</a>
+        <br>
+        <br>
+        {{#if project.dataValues.live_url}}
+          <a href="{{project.dataValues.live_url}}" target="_blank" class="link">Live URL</a>
+        {{else}}
+          <p>No live URL available</p>
+        {{/if}}
+      </div>
+    </div>
+
+    <div class="description-area">
+      <h1>Description</h1>
+      <p>{{project.dataValues.description}}</p>
+    </div>
+
+    <style>
+      .main-area { display: flex; border: 1px solid; margin: 10px; max-width:
+      100%; } .image { width: 350px; height: 220px; margin: 10px; } .image img {
+      position: relative; object-fit: cover; width: 348px; height: 219px; border: 1px solid ;}
+      .description { margin-top: 10px; } .link { margin-top: 20px; } .description-area { border: 1px solid;
+      margin: 10px; padding: 10px; } .description-area p { font-size: 12px; }
+    </style>
+  </body>
+</html>

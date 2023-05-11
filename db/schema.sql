@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS inquiry_db;
+CREATE DATABASE inquiry_db;
