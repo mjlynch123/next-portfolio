@@ -109,6 +109,8 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 10px;
+  border-bottom: 1px solid;
+  padding-bottom: 35px;
 }
 
 .project-cards {
