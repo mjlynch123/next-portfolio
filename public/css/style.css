@@ -162,7 +162,8 @@ header {
 
 .form-container {
   border: 1px solid;
-  width: 800px;
+  width: 90%;
+  max-width: 800px;
   padding: 10px;
   position: relative;
   border-radius: 5px;
@@ -172,20 +173,24 @@ header {
   margin-bottom: 30px;
 }
 
-#email,
+#emailAddress,
 #name,
 #message {
   border-radius: 5px;
   outline: none;
   margin-top: 10px;
+  width: 90%;
+  max-width: 800px;
 }
 
 #message {
-  width: 100%;
+  width: 90%;
+  max-width: 800px;
   height: 105px;
   resize: none;
   border: 1px solid #bfbfbf;
   overflow-y: scroll;
+  margin-top: 10px;
 }
 
 .submitBtn {
