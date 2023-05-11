@@ -127,7 +127,7 @@ header {
 }
 
 .card-image {
-  height: 200px; /* Adjust the height to your liking */
+  height: 220px; /* Adjust the height to your liking */
   width: 100%;
   background-size: contain;
   border-bottom: 1px solid;
