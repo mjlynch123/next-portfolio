@@ -348,6 +348,12 @@ footer {
   border-top: 1px solid;
 }
 
+@media screen and (min-aspect-ratio: 21/9) {
+  .project-cards {
+    width: 20%;
+  }
+}
+
 @media only screen and (max-width: 820px) {
   #grid-container {
     display: flex;
