@@ -3,6 +3,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+main, html {
+  background-color: #e5e5e5;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -10,7 +14,6 @@ body {
 
 header {
   float: right;
-  /* padding: 20px 10px; */
   font-size: 25px;
   width: 100%;
 }
@@ -20,7 +23,6 @@ header {
   justify-content: center;
   font-size: 25px;
   width: 100%;
-  background-color: transparent;
   display: flex;
   align-items: center;
   text-align: center;
@@ -29,17 +31,6 @@ header {
 .nav-item {
   margin: 0px 20px;
   display: flex;
-}
-
-.form-container {
-  border: 1px solid;
-  width: 800px;
-  padding: 10px;
-  position: relative;
-  border-radius: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
 }
 
 #email,
@@ -58,15 +49,6 @@ header {
   overflow-y: scroll;
 }
 
-.submitBtn {
-  width: 100%;
-  height: 45px;
-  margin-top: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: aquamarine;
-}
-
 .home:hover {
   color: grey;
 }
@@ -78,30 +60,19 @@ header {
   height: 500px;
 }
 
-.landing-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  width: 100%;
-  height: 80vh;
-  align-items: center;
-}
-
-.landing-buttons {
-  display: flex;
-  flex-direction: row;
-}
-
 /* Introduction */
 .intro {
-  margin: 20px;
+  margin: 35px;
   padding: 10px;
+  width: 50%;
+  background-color: #e5e5e5;
+  line-height: 2.5rem;
+  border: 1px solid;
 }
 
 .heading {
   text-align: center;
-  border-bottom: 3px solid;
+  border-bottom: 5px solid;
   margin: 10px 25px;
 }
 
@@ -110,8 +81,9 @@ header {
 
 .project-header {
   text-align: center;
-  border-bottom: 3px solid;
+  border-bottom: 5px solid black;
   margin: 20px 20px;
+  /* color: #0d47a1; */
 }
 
 /* These are the cards on the homepage */
@@ -133,10 +105,7 @@ header {
   color: black;
   text-decoration: none;
   height: 350px;
-}
-
-#loggedinCards:hover {
-  color: grey;
+  background-color: #fff;
 }
 
 .card-image {
@@ -155,53 +124,66 @@ header {
 
 .card-content {
   padding: 10px;
+  background-color: #fff;
 }
 
-.card-content h2 {
+.card-content h3 {
   margin: 0;
+  background-color: #fff;
 }
 
 .card-content p {
   font-size: 10px;
+  background-color: #fff;
 }
 
 .outer-link {
   position: absolute;
   bottom: 10px;
   width: 100%;
+  background-color: transparent;
 }
 
 .links {
   display: flex;
   justify-content: center;
+  background-color: #fff;
 }
 
 .link {
-  border: 1px solid;
-  color: black;
+  border: none;
+  color: #333;
+  background-color: #2196f3;
   text-decoration: none;
   padding: 10px;
   margin: 5px;
+  border-radius: 7px;
+}
+
+.link:hover {
+  color: white;
 }
 
 #na:hover {
-  color: black;
+  color: white;
 }
 
 
 /* Contact Form */
 
 .form-container {
-  border: 1px solid;
+  border: none;
   width: 90%;
   max-width: 800px;
   padding: 10px;
   position: relative;
-  border-radius: 5px;
+  border-radius: 7px;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   margin-bottom: 30px;
+  background-color: #fff;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
 }
 
 #emailAddress,
@@ -212,6 +194,7 @@ header {
   margin-top: 10px;
   width: 90%;
   max-width: 800px;
+  background-color: #fff;
 }
 
 #message {
@@ -225,12 +208,13 @@ header {
 }
 
 .submitBtn {
-  max-width: 700px;
+  width: 700px;
   height: 45px;
   margin-top: 10px;
   border-radius: 5px;
   border: none;
-  background-color: aquamarine;
+  background-color: #2196f3;
+  color: white;
 }
 
 .greeting {
