@@ -2,24 +2,81 @@
 
   <body>
 
+    <div class="intro-section">
+      <h1 class="heading">About Me</h1>
+      <p class="intro">
+        Welcome to my web design portfolio! My name is Martin Lynch, and I am a
+        skilled web designer with seven years of experience in the industry.
+        Before transitioning to web design, I served as an airborne military
+        police officer in the army. My time in the military taught me valuable
+        skills such as discipline, attention to detail, and problem-solving,
+        which have proved to be invaluable in my web design career. I am
+        proficient in several coding languages, including HTML, CSS, JavaScript,
+        and more. Additionally, I hold a degree in Game Design and am currently
+        pursuing a Full Stack Engineering Certificate from Northwestern
+        University. My diverse skill set and passion for design enable me to
+        create beautiful, functional, and user-friendly websites that meet my
+        clients' needs. Please take a look at my portfolio to see examples of my
+        work.
+      </p>
+    </div>
+
     <div class="project-header">
       <h1>Projects</h1>
     </div>
 
-    {{! <grid-container> }}
-    <div id="grid-container">
-      {{#each project}}
-        <a href="/project/{{this.dataValues.id}}" class="project-cards">
-          <div class="card-image">
-            <img src="{{this.dataValues.image}}" alt="" />
+    {{#if loggedIn}}
+      <div id="grid-container">
+        {{#each project}}
+          <a
+            href="/project/{{this.dataValues.id}}"
+            class="project-cards"
+            id="loggedinCards"
+          >
+            <div class="card-image">
+              <img src="{{this.dataValues.image}}" alt="" />
+            </div>
+            <div class="card-content">
+              <h2>{{this.dataValues.name}}</h2>
+              <p style="font-size: 10px;">{{this.dataValues.languages}}</p>
+            </div>
+          </a>
+        {{/each}}
+      </div>
+    {{else}}
+      <div id="grid-container">
+        {{#each project}}
+          <div class="project-cards">
+            <div class="card-image">
+              <img src="{{this.dataValues.image}}" alt="" />
+            </div>
+            <div class="card-content">
+              <h2>{{this.dataValues.name}}</h2>
+              <p style="font-size: 10px;">{{this.dataValues.languages}}</p>
+            </div>
+            <div class="outer-link">
+              <div class="links">
+                <a
+                  href="{{this.dataValues.github_link}}"
+                  target="_blank"
+                  class="link"
+                >Github Repo</a>
+                {{#if this.dataValues.live_url}}
+                  <a
+                    href="{{this.dataValues.live_url}}"
+                    target="_blank"
+                    class="link"
+                  >Live URL</a>
+                {{else}}
+                  <a class="link"
+                  id="na">Not available</a>
+                {{/if}}
+              </div>
+            </div>
           </div>
-          <div class="card-content">
-            <h2>{{this.dataValues.name}}</h2>
-            <p style="font-size: 10px;">{{this.dataValues.languages}}</p>
-          </div>
-        </a>
-      {{/each}}
-    </div>
+        {{/each}}
+      </div>
+    {{/if}}
 
     <div class="form-container">
       <h3>Contact Me</h3>
