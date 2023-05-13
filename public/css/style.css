@@ -125,7 +125,7 @@ nav button {
 
 .port-img {
   position: relative;
-  border: 1px solid;
+
   left: 50%;
   transform: translateX(-50%);
   height: 300px;
