@@ -98,9 +98,10 @@ nav button {
 }
 
 .intro {
+  position: relative;
   margin: 35px;
   padding: 10px;
-  width: 50%;
+  width: 65%;
   background-color: #e5e5e5;
   line-height: 2.5rem;
 }
@@ -112,9 +113,10 @@ nav button {
 }
 
 .port-card {
-  position: absolute;
-  left: 63%;
-  top: 130px;
+  position: relative;
+  left: 0%;
+  transform: translateX(-50%);
+  top: 0px;
   height: 350px;
   margin: 35px;
   padding: 10px;
@@ -236,6 +238,35 @@ nav button {
 
 #na:hover {
   color: white;
+}
+
+
+/* Update form */
+.update-form {
+  margin: 10px;
+  padding: 10px;
+}
+
+.update-form input, textarea {
+  border: none;
+}
+
+.updateBtn {
+  position: relative;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  margin-bottom: 30px;
+  width: 200px;
+  height: 55px;
+  border: none;
+  border-radius: 7px;
+  background-color: #4dff88;
+}
+
+#project-description {
+  resize: none;
+  width: 100%;
 }
 
 
@@ -485,6 +516,15 @@ footer {
   nav button {
     font-size: 12px;
     padding-top: 15px;
+  }
+
+  .inner {
+    flex-direction: column-reverse;
+  }
+
+  .port-card {
+    left: 40%;
+    transform: translateX(-50%);
   }
 
   .loginBtn {
