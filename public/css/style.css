@@ -114,7 +114,7 @@ nav button {
 .port-card {
   position: absolute;
   left: 63%;
-  top: 145px;
+  top: 130px;
   height: 350px;
   margin: 35px;
   padding: 10px;
@@ -126,8 +126,14 @@ nav button {
   border: 1px solid;
   left: 50%;
   transform: translateX(-50%);
-  height: 250px;
-  width: 250px;
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+}
+
+.port-img img {
+  height: 300px;
+  width: 300px;
   border-radius: 50%;
 }
 
