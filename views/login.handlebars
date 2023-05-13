@@ -3,37 +3,52 @@
   up or log in instead and a continue as guest option. If the user selects login or signup
   instead, then we will want to add the display: none property to the one that is not being used
 }}
+<body style="background-color: #e5e5e5;">
+  <div class="row login-container">
 
-<div class="row login-container">
+    {{! Login form }}
+    <div class="col-md-6" id="login">
+      <h2>Log In</h2>
 
-  {{! Login form }}
-  <div class="col-md-6" id="login">
-    <h2>Log In</h2>
-
-    <form id="login-form">
-      <div class="input">
-        <label for="email">Email:</label>
-        <div class="input-container">
-          <input type="email" id="email" name="email" required />
-          <i class="fa-solid fa-envelope" style="margin-top: 6px;"></i>
+      <form id="login-form">
+        <div class="input">
+          <label for="email">Email:</label>
+          <div class="input-container">
+            <input type="email" id="email" name="email" required />
+            <i class="fa-solid fa-envelope" style="margin-top: 6px;"></i>
+          </div>
         </div>
-      </div>
-      <div class="input">
-        <label for="password">Password:</label>
-        <div class="input-container">
-          <input type="password" id="password" name="password" required />
-          <i class="fa-solid fa-key"></i>
+        <div class="input">
+          <label for="password">Password:</label>
+          <div class="input-container">
+            <input type="password" id="password" name="password" required />
+            <i class="fa-solid fa-key"></i>
+          </div>
         </div>
-      </div>
-      <button type="submit" class="logIn">Log in</button>
-    </form>
-    {{!-- <button id="sign-up">Sign up Instead</button> --}}
-    {{! Continue as guest link }}
-    <a class="nav-link" href="/" id="guest">Not an Admin, Go back</a>
+        <button type="submit" class="logIn">Log in</button>
+      </form>
+      {{! <button id="sign-up">Sign up Instead</button> }}
+      {{! Continue as guest link }}
+      <a class="nav-link" href="/" id="guest">Not an Admin, Go back</a>
+    </div>
   </div>
 
-  {{! Sign up form }}
-  <div class="col-md-6" style="display: none;" id="signup">
+  <style>
+    #login, #signup { width: 320px; box-shadow: 0 0 15px 3px #bfbfbf;}
+    .input-container { position: relative; } .input-container i { position:
+    absolute; left: 10px; top: 50%; transform: translateY(-50%); }
+    input[type=password], input[type=email], input[type=text] { padding-left:
+    30px; } .logIn { width: 100%; height: 40px; margin-top: 10px; border-radius:
+    5px; border: none; background-color: #4dff88; } #sign-up, #log-in { width:
+    100%; height: 40px; border-radius: 5px; border: none; background-color:
+    #4dff88; } #log-in { margin-top: 10px; }, .form-group { margin-top: 10px;}
+  </style>
+
+  <script src="/js/login.js"></script>
+</body>
+
+{{! Sign up form }}
+{{!-- <div class="col-md-6" style="display: none;" id="signup">
     <h2>Signup</h2>
 
     <form
@@ -79,18 +94,4 @@
     </form>
     {{! Continue as guest link }}
     <a class="nav-link" href="/" id="guest">continue as guest</a>
-  </div>
-</div>
-
-<style>
-  #login, #signup { width: 320px; box-shadow: 0 0 15px 3px #bfbfbf;}
-  .input-container { position: relative; } .input-container i { position:
-  absolute; left: 10px; top: 50%; transform: translateY(-50%); }
-  input[type=password], input[type=email], input[type=text] { padding-left:
-  30px; } .logIn { width: 100%; height: 40px; margin-top: 10px; border-radius:
-  5px; border: none; background-color: #4dff88; } #sign-up, #log-in { width: 100%;
-  height: 40px; border-radius: 5px; border: none; background-color: #4dff88; }
-  #log-in { margin-top: 10px; }, .form-group { margin-top: 10px;}
-</style>
-
-<script src="/js/login.js"></script>
+  </div> --}}

@@ -29,7 +29,7 @@
       <nav>
         {{#if loggedIn}}
           <form action="/" method="GET">
-            <button type="submit" style="border: none; background-color: transparent; color: grey;">Home</button>
+            <button type="submit" class="navBtn">Home</button>
           </form>
           {{> logout-button}}
           {{>add-project}}
@@ -37,17 +37,17 @@
         {{else}}
           <div>
             <form action="#projects" method="GET">
-              <button type="submit" style="border: none; background-color: transparent; color:grey;">Projects</button>
+              <button type="submit" class="navBtn">Projects</button>
             </form>
           </div>
             
           <div>
             <form action="#contact" method="GET">
-              <button type="submit" style="border: none; background-color: transparent; color:grey;">Contact</button>
+              <button type="submit" class="navBtn">Contact</button>
             </form>
           </div>
           <form action="/login" method="GET">
-            <button type="submit" style="border: 2px solid; padding: 2px 4px; border-radius: 50%; background-color: transparent; color:grey; position:absolute; top: 10px; right: 30px">
+            <button type="submit" class="loginBtn">
               <i class="fa-solid fa-user-astronaut"></i>
             </button>
           </form>
