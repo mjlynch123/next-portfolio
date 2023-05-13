@@ -131,8 +131,9 @@ router.post("/project/:id", async (req, res) => {
 
 router.post('/update/:id', async (req, res) => {
   try {
-    const { name, languages, github_link, live_url, description } = req.body;
+    const { image, name, languages, github_link, live_url, description } = req.body;
     const project = await Project.update({
+      image,
       name,
       languages,
       github_link,
