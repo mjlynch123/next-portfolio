@@ -4,27 +4,59 @@
 
     <label for="project_image">Project Image (Please submit link to image):</label><br
     />
-    <input type="text" id="project_image" name="project_image" required/><br />
+    <div class="input-container">
+      <input type="text" id="project_image" name="project_image" required /><br
+      />
+      <i class="fa-solid fa-image" style="color: #000000;"></i>
+    </div>
 
     <label for="project_name">Project Name:</label><br />
-    <input type="text" id="project_name" name="project_name" required/><br />
+    <div class="input-container">
+      <input type="text" id="project_name" name="project_name" required /><br />
+      <i class="fa-solid fa-file" style="color: #000000;"></i>
+    </div>
 
     <label for="project_languages">Languages Used:</label><br />
-    <input type="text" id="project_languages" name="project_languages" required/><br />
+    <div class="input-container">
+      <input
+        type="text"
+        id="project_languages"
+        name="project_languages"
+        required
+      /><br />
+      <i class="fa-solid fa-code" style="color: #000000;"></i>
+    </div>
 
     <label for="project_description">Project Description:</label><br />
     <textarea id="project_description" name="project_description"></textarea><br
     />
 
     <label for="project_live_url">Live URL:</label><br />
-    <input type="text" id="project_live_url" name="project_live_url" /><br />
+    <div class="input-container">
+      <input type="text" id="project_live_url" name="project_live_url" /><br />
+      <i class="fa-solid fa-earth-americas" style="color: #000000;"></i>
+    </div>
 
     <label for="project_github_link">GitHub Link:</label><br />
-    <input type="text" id="project_github_link" name="project_github_link" required/><br
-    />
+    <div class="input-container">
+      <input
+        type="text"
+        id="project_github_link"
+        name="project_github_link"
+        required
+      /><br />
+      <i class="fa-brands fa-github" style="color: #000000;"></i>
+    </div>
 
     <button type="submit" class="add-new-button">Add</button>
   </form>
+
+  <style>
+    .input-container { position: relative; } .input-container i { position:
+    absolute; left: 5px; top: 50%; transform: translateY(-50%); } input[type=text] { padding-left:
+    30px; }
+
+  </style>
 </body>
 
 {{! 

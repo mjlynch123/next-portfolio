@@ -4,15 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Martin Lynch | Full Stack Developer</title>
     <link rel="stylesheet" href="/css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.css"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/solid.css"
-    />
+    <script src="https://kit.fontawesome.com/5e86550e56.js" crossorigin="anonymous"></script>
     <link rel="stylesheet"href="https://fonts.googleapis.com/css?family=Tangerine">
 
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
@@ -60,6 +52,12 @@
     <main>
       {{{body}}}
     </main>
+
+    {{#if showFooter}}
+      <div style="border: 1px solid; height: 200px">
+
+      </div>
+    {{/if}}
 
     {{#if logged_in}}
      

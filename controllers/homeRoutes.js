@@ -6,10 +6,11 @@ const Project = require("../models/project")
 router.get("/", async (req, res) => {
   try {
     const showNav = "true";
+    const showFooter = "true";
     const user = await User.findByPk(req.session.user_id);
     const project = await Project.findAll();
     
-    res.render("homepage", { loggedIn: req.session.loggedIn, user, project, showNav });
+    res.render("homepage", { loggedIn: req.session.loggedIn, user, project, showNav, showFooter });
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Server error" });
@@ -18,6 +19,7 @@ router.get("/", async (req, res) => {
 
 router.get("/login", async (req, res) => {
   const showNav = "false";
+  const showFooter = "false";
   res.render("login", { loggedIn: req.session.loggedIn, });
 });
 
@@ -25,6 +27,7 @@ router.get("/dashboard", async (req, res) => {
   try {
     // Finding the user
     const showNav = "true";
+    const showFooter = "true";
     const user = await User.findByPk(req.session.user_id);
     const inquiries = await Inquiry.findAll();
     
@@ -42,6 +45,7 @@ router.get("/dashboard", async (req, res) => {
 
 router.get("/new", async (req, res) => {
   const showNav = "true";
+  const showFooter = "true";
   res.render("addNew", { loggedIn: req.session.loggedIn, showNav, });
 });
 
@@ -82,15 +86,17 @@ router.post('/newProject', async (req, res) => {
 
 router.get("/project/:id", async (req,res) => {
   const showNav = "true";
+  const showFooter = "true";
   const project = await Project.findOne({ where: { id: req.params.id } });
   console.log(project);
-  res.render("singleProject", { loggedIn: req.session.loggedIn, project, showNav, })
+  res.render("singleProject", { loggedIn: req.session.loggedIn, project, showNav })
 });
 
 router.get("/inquiry/:id", async (req, res) => {
   const showNav = "true";
+  const showFooter = "true";
   const inquiry = await Inquiry.findOne({ where: { id: req.params.id } });
-  res.render("inquiry", { loggedIn: req.session.loggedIn, inquiry, showNav, showNav, });
+  res.render("inquiry", { loggedIn: req.session.loggedIn, inquiry, showNav, showNav });
 });
 
 
@@ -103,7 +109,7 @@ router.post("/delete/:id", async (req, res) => {
     }
 
     await inquiry.destroy();
-    res.redirect("/");
+    res.redirect("/dashboard");
   } catch (error) {
     console.log(error);
     res.status(500).send("An error occurred while deleting the inquiry");
@@ -152,11 +158,13 @@ router.post('/update/:id', async (req, res) => {
 
 router.get("/success", async (req, res) => {
   const showNav = "false";
+  const showFooter = "false";
   res.render("contact-success");
 });
 
 router.get("/error", async (req, res) => {
   const showNav = "false";
+  const showFooter = "false";
   res.render("failure");
 });
 
