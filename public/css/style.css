@@ -539,7 +539,9 @@ footer {
   }
 
   #login {
-    left: 30px;
+    top: 330px;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .port-card {
