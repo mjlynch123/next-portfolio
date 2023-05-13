@@ -106,4 +106,20 @@ router.post("/delete/:id", async (req, res) => {
 
 // ! Create delete route for projects
 
+router.post("/project/:id", async (req, res) => {
+  try {
+    const project = await Project.findOne({ where: { id: req.params.id } });
+
+    if (!project) {
+      return res.status(404).send("Project not found");
+    }
+
+    await project.destroy();
+    res.redirect("/");
+  } catch (error) {
+    console.log(error);
+    res.status(500).send("An error occurred while deleting the inquiry");
+  }
+});
+
 module.exports = router;
