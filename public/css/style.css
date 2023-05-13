@@ -19,10 +19,6 @@ header {
 }
 
 nav {
-  border: 1px solid;
-}
-
-nav {
   display: flex !important;
   flex-direction: row;
   justify-content: center; /* optional: center the buttons horizontally */
@@ -103,7 +99,6 @@ nav button {
   width: 50%;
   background-color: #e5e5e5;
   line-height: 2.5rem;
-  border: 1px solid;
 }
 
 .heading {
