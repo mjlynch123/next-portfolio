@@ -578,6 +578,7 @@ footer {
 
   .intro {
     width: 81%;
+    text-align: center;
   }
 
   .info {
@@ -627,6 +628,16 @@ footer {
     width: 275px;
     height: 45px;
     border-radius: 7px;
+  }
+
+  /* Success Page */
+  .success, .failure {
+    width: 350px !important;
+    font-size: 14px;
+  }
+
+  .failure h2 {
+    font-size: 19px;
   }
 }
 
