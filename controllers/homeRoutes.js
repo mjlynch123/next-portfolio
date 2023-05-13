@@ -5,10 +5,11 @@ const Project = require("../models/project")
 
 router.get("/", async (req, res) => {
   try {
+    const showNav = "true";
     const user = await User.findByPk(req.session.user_id);
     const project = await Project.findAll();
     
-    res.render("homepage", { loggedIn: req.session.loggedIn, user, project });
+    res.render("homepage", { loggedIn: req.session.loggedIn, user, project, showNav });
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Server error" });
@@ -16,12 +17,14 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/login", async (req, res) => {
-  res.render("login", { loggedIn: req.session.loggedIn });
+  const showNav = "false";
+  res.render("login", { loggedIn: req.session.loggedIn, });
 });
 
 router.get("/dashboard", async (req, res) => {
   try {
     // Finding the user
+    const showNav = "true";
     const user = await User.findByPk(req.session.user_id);
     const inquiries = await Inquiry.findAll();
     
@@ -29,6 +32,7 @@ router.get("/dashboard", async (req, res) => {
       loggedIn: req.session.loggedIn,
       user,
       inquiries,
+      showNav,
     });
   } catch (err) {
     console.error(err);
@@ -37,7 +41,8 @@ router.get("/dashboard", async (req, res) => {
 });
 
 router.get("/new", async (req, res) => {
-  res.render("addNew", { loggedIn: req.session.loggedIn });
+  const showNav = "true";
+  res.render("addNew", { loggedIn: req.session.loggedIn, showNav, });
 });
 
 router.post("/inquiry", async (req, res) => {
@@ -77,14 +82,16 @@ router.post('/newProject', async (req, res) => {
 });
 
 router.get("/project/:id", async (req,res) => {
+  const showNav = "true";
   const project = await Project.findOne({ where: { id: req.params.id } });
   console.log(project);
-  res.render("singleProject", { loggedIn: req.session.loggedIn, project })
+  res.render("singleProject", { loggedIn: req.session.loggedIn, project, showNav, })
 });
 
 router.get("/inquiry/:id", async (req, res) => {
+  const showNav = "true";
   const inquiry = await Inquiry.findOne({ where: { id: req.params.id } });
-  res.render("inquiry", { loggedIn: req.session.loggedIn, inquiry });
+  res.render("inquiry", { loggedIn: req.session.loggedIn, inquiry, showNav, showNav, });
 });
 
 
