@@ -54,8 +54,7 @@ router.post("/inquiry", async (req, res) => {
     Inquiry.create({ name, email, message });
     res.redirect("/success");
   } catch (err) {
-    console.error(err);
-    res.status(500).send("Error submitting contact form");
+    res.redirect("/error")
   }
 });
 
@@ -153,7 +152,12 @@ router.post('/update/:id', async (req, res) => {
 
 router.get("/success", async (req, res) => {
   const showNav = "false";
-  res.render("contact-success", {showNav});
+  res.render("contact-success");
+});
+
+router.get("/error", async (req, res) => {
+  const showNav = "false";
+  res.render("failure");
 });
 
 module.exports = router;
