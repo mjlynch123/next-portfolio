@@ -62,7 +62,7 @@ nav button {
   background-color: transparent; 
   color:grey; 
   position: absolute; 
-  top: 15px; 
+  top: 9px; 
   right: 15px
 }
 
@@ -408,6 +408,16 @@ input {
   border-radius: 7px;
 }
 
+.deleteBtn {
+  position: absolute;
+  top: 90px;
+  right: 15px;
+  width: 150px;
+  height: 35px;
+  border: none;
+  background-color: red;
+  color: white;
+}
 
 /* Adding new project */
 

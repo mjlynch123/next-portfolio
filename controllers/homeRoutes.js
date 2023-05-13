@@ -122,4 +122,25 @@ router.post("/project/:id", async (req, res) => {
   }
 });
 
+router.post('/update/:id', async (req, res) => {
+  try {
+    const { name, languages, github_link, live_url, description } = req.body;
+    const project = await Project.update({
+      name,
+      languages,
+      github_link,
+      live_url,
+      description,
+    }, {
+      where: {
+        id: req.params.id
+      }
+    });
+    res.redirect(`/project/${req.params.id}`);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('An error occurred while updating the project.');
+  }
+})
+
 module.exports = router;
