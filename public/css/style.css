@@ -16,6 +16,7 @@ header {
   float: right;
   font-size: 25px;
   width: 100%;
+  margin-bottom: 20px
 }
 
 nav {
@@ -34,6 +35,12 @@ nav button {
   border: none;
   background-color: transparent; 
   color:grey;
+  text-decoration: none;
+  margin: 10px
+}
+
+.navBtn:hover {
+  color: grey;
 }
 
 .login-container {
@@ -64,7 +71,7 @@ nav button {
   background-color: transparent; 
   color:grey; 
   position: absolute; 
-  top: 9px; 
+  top: 0px; 
   right: 15px
 }
 
