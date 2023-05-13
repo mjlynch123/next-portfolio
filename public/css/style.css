@@ -362,7 +362,9 @@ input {
   margin-bottom: 10px;
 }
 
-/* Inquiry */
+
+/* Dashboard Single Inquiries */
+
 .main {
   border: 1px solid;
   height: auto;
@@ -372,6 +374,7 @@ input {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 10px;
+  background-color: white;
 }
 
 .name {
@@ -391,17 +394,55 @@ input {
 }
 
 .buttons {
-  border: 1px solid;
   position: absolute;
   top: 67%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
+.buttons button {
+  border: none;
+  width: 300px;
+  height: 45px;
+  background-color: #4dff88;
+  border-radius: 7px;
+}
+
 
 /* Adding new project */
+
 .form {
   margin: 10px;
+}
+
+.form input {
+  outline: none;
+  border: none;
+}
+
+.form h4 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#project_description {
+  resize: none;
+  width: 100%;
+  height: 150px;
+  border: none;
+  outline: none;
+}
+
+.add-new-button {
+  width: 200px;
+  height: 55px;
+  background-color: #4dff88;
+  border: none;
+  border-radius: 7px;
+  margin-top: 10px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 footer {

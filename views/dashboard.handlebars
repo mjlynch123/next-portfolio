@@ -1,13 +1,19 @@
-<div class="greeting">
-  <h1>Welcome, {{user.dataValues.name}}</h1>
-</div>
+<body style="background-color: #e5e5e5;">
+  <div class="greeting">
+    <h1>Welcome, {{user.dataValues.name}}</h1>
+  </div>
 
-<div id="card-container">
-  {{#each inquiries}}
-    <a href="/inquiry/{{this.dataValues.id}}" class="card" style="border-radius: 7px;">
+  <div id="card-container">
+    {{#each inquiries}}
+      <a
+        href="/inquiry/{{this.dataValues.id}}"
+        class="card"
+        style="border-radius: 7px;"
+      >
         <h3>{{this.dataValues.name}}</h3>
         <p>{{this.dataValues.email}}</p>
         <p>{{this.dataValues.message}}</p>
-    </a>
-  {{/each}}
-</div>
+      </a>
+    {{/each}}
+  </div>
+</body>
