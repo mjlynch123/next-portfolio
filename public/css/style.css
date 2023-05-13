@@ -538,6 +538,10 @@ footer {
     flex-direction: column-reverse;
   }
 
+  #login {
+    left: 30px;
+  }
+
   .port-card {
     left: 40%;
     transform: translateX(-50%);
