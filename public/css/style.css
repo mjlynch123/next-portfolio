@@ -180,6 +180,10 @@ nav button {
   background-color: #fff;
 }
 
+.project-cards:hover {
+  color: black;
+}
+
 .card-image {
   height: 200px;
   width: 100%;
