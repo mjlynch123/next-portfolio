@@ -103,4 +103,7 @@ router.post("/delete/:id", async (req, res) => {
     res.status(500).send("An error occurred while deleting the inquiry");
   }
 });
+
+// ! Create delete route for projects
+
 module.exports = router;
