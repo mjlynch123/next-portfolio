@@ -47,7 +47,7 @@ router.post("/inquiry", async (req, res) => {
 
     // Insert the data into the Contact table
     Inquiry.create({ name, email, message });
-    res.redirect("/");
+    res.redirect("/success");
   } catch (err) {
     console.error(err);
     res.status(500).send("Error submitting contact form");
@@ -142,5 +142,10 @@ router.post('/update/:id', async (req, res) => {
     res.status(500).send('An error occurred while updating the project.');
   }
 })
+
+router.get("/success", async (req, res) => {
+  const showNav = "false";
+  res.render("contact-success", {showNav});
+});
 
 module.exports = router;

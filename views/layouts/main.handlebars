@@ -26,6 +26,7 @@
   
   <body>
     <header>
+      {{#if showNav}}
       <nav>
         {{#if loggedIn}}
           <form action="/" method="GET">
@@ -53,6 +54,7 @@
           </form>
         {{/if}}
       </nav>
+      {{/if}}
     </header>
 
     <main>
