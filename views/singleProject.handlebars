@@ -26,9 +26,7 @@
         {{else}}
           <p>No live URL available</p>
         {{/if}}
-        <form action="/project/{{project.dataValues.id}}" method="post">
-          <button class="deleteBtn">Delete</button>
-        </form>
+
       </div>
     </div>
 
@@ -36,6 +34,14 @@
       <h1>Description</h1>
       <p>{{project.dataValues.description}}</p>
     </div>
+
+    <form
+      action="/project/{{project.dataValues.id}}"
+      method="post"
+      style="text-align: center;"
+    >
+      <button class="deleteBtn">Delete</button>
+    </form>
 
     <form
       action="/update/{{project.dataValues.id}}"
@@ -98,12 +104,12 @@
     </form>
 
     <style>
-      .main-area { display: flex; margin: 10px; max-width:
-      100%; } .image { width: 350px; height: 220px; margin: 10px; } .image img {
-      position: relative; object-fit: cover; width: 348px; height: 219px;
-      } .description { margin-top: 10px; } .link {
-      margin-top: 20px; } .description-area { border-bottom: 1px solid; margin: 10px;
-      padding: 10px; } .description-area p { font-size: 12px; }
+      .main-area { display: flex; margin: 10px; max-width: 100%; } .image {
+      width: 350px; height: 220px; margin: 10px; } .image img { position:
+      relative; object-fit: cover; width: 348px; height: 219px; } .description {
+      margin-top: 10px; } .link { margin-top: 20px; } .description-area {
+      border-bottom: 1px solid; margin: 10px; padding: 10px; } .description-area
+      p { font-size: 12px; }
     </style>
   </body>
 </html>

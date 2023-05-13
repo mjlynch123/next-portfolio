@@ -283,7 +283,7 @@ nav button {
 
 .card {
   border: 1px solid #ddd;
-  box-shadow: 0px 0px 10px #ddd;
+  box-shadow: 0px 0px 10px 5px #b3b3b3;
   border-radius: 5px;
   overflow: hidden;
   flex-basis: 20%;
@@ -291,7 +291,7 @@ nav button {
   position: relative;
   padding: 10px;
   display: inline-block;
-  margin: 5px;
+  margin: 10px;
   color: black;
   text-decoration: none;
   height: 315px;
@@ -441,6 +441,8 @@ input {
   border-radius: 7px;
 }
 
+/* This is the delete button on the single project page */
+
 .deleteBtn {
   position: absolute;
   top: 90px;
@@ -582,8 +584,49 @@ footer {
     position: static;
     margin: 10px 0;
   }
+
+  #card-container a {
+    width: 100%;
+  }
+
+  .card {
+    height: 300px;
+    flex-basis: auto;
+    max-width: 95%;
+  }
+
+  .main {
+    width: 95%;
+  }
+
+  .buttons button {
+    margin-top: 50px;
+  }
+
+  /* Single Project */
+  .main-area {
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+  }
+
+  .image {
+    position: relative;
+    left: 47%;
+    transform: translateX(-50%);
+  }
+
+  .deleteBtn {
+    position: static;
+    margin-top: 10px;
+    width: 275px;
+    height: 45px;
+    border-radius: 7px;
+  }
 }
 
-@media only screen and (max-width: 576px) {
-
+@media screen and (max-width: 300px) {
+  .buttons button {
+    width: 150px;
+  }
 }
