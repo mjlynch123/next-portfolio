@@ -566,6 +566,11 @@ footer {
     flex-direction: column-reverse;
   }
 
+  .inner button {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   #login {
     top: 330px;
     left: 50%;
@@ -669,6 +674,14 @@ footer {
     width: 275px;
     height: 45px;
     border-radius: 7px;
+  }
+
+  .description-area {
+    text-align: center;
+  }
+
+  .description-area h1 {
+    margin-top: 15px;
   }
 
   /* Success Page */
