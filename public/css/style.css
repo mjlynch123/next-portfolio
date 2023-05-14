@@ -115,6 +115,23 @@ nav button {
   line-height: 2.5rem;
 }
 
+.resumeBtn {
+  position: relative;
+  border: none;
+  border-radius: 7px;
+  font-size: 15px;
+  color: #333;
+  left: 42px;
+  top: -30px;
+  height: 45px;
+  width: 210px;
+  background-color: #4dff88;
+}
+
+.resumeBtn i {
+  margin-right: 10px;
+}
+
 .heading {
   text-align: center;
   border-bottom: 5px solid;
@@ -314,6 +331,17 @@ nav button {
 
 .card:hover {
   color: grey;
+}
+
+
+/* Dashboard user options */
+.user-options {
+  border: 1px solid;
+  height: 300px;
+  margin: 30px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 
