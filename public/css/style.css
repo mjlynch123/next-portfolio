@@ -107,6 +107,9 @@ nav button {
 /* Introduction */
 .inner {
   display: flex;
+  border: 1px solid;
+  margin: 35px;
+  position: relative;
 }
 
 .intro {
@@ -142,12 +145,11 @@ nav button {
 }
 
 .port-card {
-  position: relative;
-  left: 0%;
-  transform: translateX(-50%);
-  top: 0px;
+  /* position: relative;
+  left: 50%;
+  transform: translateX(-50%); */
   height: 350px;
-  margin: 35px;
+  margin: 35px auto;
   padding: 10px;
   width: 375px;
 }
@@ -537,6 +539,19 @@ footer {
   border-top: 1px solid;
 }
 
+@media screen and (min-aspect-ratio: 21/9) {
+  body {
+    max-width: 1500px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .port-card {
+    left: 30%;
+  }
+}
+
 @media only screen and (max-width: 2048px) { 
   .intro {
     width: 800px;
@@ -553,24 +568,56 @@ footer {
   }
 }
 
+@media only screen and (min-width: 1700px) { 
+  .intro {
+    width: 800px;
+  }
+
+  .port-card {
+    width: 350px;
+    left: 55%;
+  }
+
+  .port-img, .port-img img {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media only screen and (max-width: 1700px) { 
+  .intro {
+    width: 800px;
+  }
+
+  .port-img, .port-img img {
+    width: 220px;
+    height: 220px;
+  }
+}
+
+@media only screen and (max-width: 1200px) { 
+  .inner {
+    flex-direction: column-reverse;
+  }
+
+  .intro {
+    margin: 20px auto;
+  }
+
+  .inner button {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+}
+
 @media only screen and (max-width: 968px) {
   .intro {
     width: 500px;
   }
-
-  .port-card {
-    width: 200px;
-    left: 20%;
-  }
-
-  .port-img, .port-img img {
-    width: 175px;
-    height: 175px;
-  }
 }
 
 @media (max-width: 768px) {
-
   #card-container {
     flex-direction: column;
     align-items: center;
@@ -579,6 +626,10 @@ footer {
   .card {
     flex-basis: calc(50% - 10px); 
     max-width: calc(50% - 10px); 
+  }
+
+  .port-name-title {
+    margin-top: -20px;
   }
 }
 
@@ -594,24 +645,10 @@ footer {
     padding-top: 15px;
   }
 
-  .inner {
-    flex-direction: column-reverse;
-  }
-
-  .inner button {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
   #login {
     top: 330px;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
-
-  .port-card {
-    left: 40%;
-    transform: translateX(-50%);
   }
 
   .loginBtn {
@@ -730,5 +767,19 @@ footer {
 @media screen and (max-width: 300px) {
   .buttons button {
     width: 150px;
+  }
+
+  .port-card {
+    width: 200px;
+    height: 250px;
+  }
+
+  .port-img, .port-img img {
+    height: 200px;
+    width: 200px;
+  }
+
+  .port-name-title {
+    font-size: 13px;
   }
 }
