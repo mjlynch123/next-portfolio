@@ -107,7 +107,6 @@ nav button {
 /* Introduction */
 .inner {
   display: flex;
-  border: 1px solid;
   margin: 35px;
   position: relative;
 }
@@ -145,9 +144,6 @@ nav button {
 }
 
 .port-card {
-  /* position: relative;
-  left: 50%;
-  transform: translateX(-50%); */
   height: 350px;
   margin: 35px auto;
   padding: 10px;
@@ -541,7 +537,7 @@ footer {
 
 @media screen and (min-aspect-ratio: 21/9) {
   body {
-    max-width: 1500px;
+    max-width: 1700px;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -574,13 +570,13 @@ footer {
   }
 
   .port-card {
-    width: 350px;
-    left: 55%;
+    width: 450px;
+    margin-top: 7px;
   }
 
   .port-img, .port-img img {
-    width: 220px;
-    height: 220px;
+    width: 320px;
+    height: 320px;
   }
 }
 
