@@ -543,13 +543,13 @@ footer {
   }
 
   .port-card {
-    width: 200px;
+    width: 220px;
     left: 30%;
   }
 
   .port-img, .port-img img {
-    width: 175px;
-    height: 175px;
+    width: 200px;
+    height: 200px;
   }
 }
 
