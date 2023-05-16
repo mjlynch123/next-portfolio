@@ -541,6 +541,16 @@ footer {
   .intro {
     width: 800px;
   }
+
+  .port-card {
+    width: 200px;
+    left: 30%;
+  }
+
+  .port-img, .port-img img {
+    width: 175px;
+    height: 175px;
+  }
 }
 
 @media only screen and (max-width: 968px) {
