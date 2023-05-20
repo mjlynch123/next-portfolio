@@ -3,7 +3,9 @@
   font-family: "Roboto", sans-serif;
 }
 
-main, html, body {
+main,
+html,
+body {
   background-color: #e5e5e5;
   width: 100%;
   margin: 0;
@@ -19,7 +21,7 @@ header {
   float: right;
   font-size: 25px;
   width: 100%;
-  margin-bottom: 20px
+  margin-bottom: 20px;
 }
 
 nav {
@@ -31,15 +33,15 @@ nav {
 
 nav button {
   flex: 1; /* make the buttons flexible */
-  margin: 10px; 
+  margin: 10px;
 }
 
 .navBtn {
   border: none;
-  background-color: transparent; 
-  color:grey;
+  background-color: transparent;
+  color: grey;
   text-decoration: none;
-  margin: 10px
+  margin: 10px;
 }
 
 .navBtn:hover {
@@ -68,14 +70,14 @@ nav button {
 }
 
 .loginBtn {
-  border: 2px solid; 
-  padding: 2px 4px; 
-  border-radius: 50%; 
-  background-color: transparent; 
-  color:grey; 
-  position: absolute; 
-  top: 0px; 
-  right: 15px
+  border: 2px solid;
+  padding: 2px 4px;
+  border-radius: 50%;
+  background-color: transparent;
+  color: grey;
+  position: absolute;
+  top: 0px;
+  right: 15px;
 }
 
 #guest {
@@ -136,6 +138,9 @@ nav button {
 .resumeBtn i {
   margin-right: 10px;
 }
+.resumeBtn:hover {
+  box-shadow: -2px 2px 7px 5px #d9d9d9;
+}
 
 .heading {
   text-align: center;
@@ -186,32 +191,31 @@ nav button {
 
 /* These are the cards on the homepage */
 #grid-container {
-  margin: 30px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-gap: 10px;
-  border-bottom: 3px solid;
-  padding-bottom: 35px;
+  display: flex;
+  width: 75%;
+  margin: 10px auto;
+  padding: 10px;
+  flex-wrap: wrap;
 }
 
 .project-cards {
-  border: 1px solid #ddd;
-  box-shadow: 0px 0px 10px #ddd;
-  border-radius: 5px;
-  overflow: hidden;
-  position: relative;
-  color: black;
-  text-decoration: none;
-  height: 350px;
-  background-color: #fff;
+  width: calc(33.33% - 20px);
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 450px;
+  border-radius: 10px;
+  box-shadow: -0px 0px 10px 3px #bfbfbf;
+  background-color: white;
 }
 
 .project-cards:hover {
   color: black;
+  box-shadow: -0px 0px 15px 8px #bfbfbf;
 }
 
 .card-image {
-  height: 200px;
+  height: 250px;
   width: 100%;
   background-size: contain;
   border-bottom: 1px solid;
@@ -219,7 +223,7 @@ nav button {
 
 .card-image img {
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
   border-bottom: 1px solid;
 }
@@ -240,8 +244,8 @@ nav button {
 }
 
 .outer-link {
-  position: absolute;
-  bottom: 10px;
+  position: relative;
+  top: 45px;
   width: 100%;
   background-color: transparent;
 }
@@ -252,7 +256,7 @@ nav button {
   background-color: #fff;
 }
 
-.link {
+ .link {
   border: none;
   color: #333;
   background-color: #2196f3;
@@ -268,8 +272,13 @@ nav button {
 
 #na:hover {
   color: white;
+  cursor: not-allowed;
 }
 
+#loggedInCards {
+  color: black;
+  text-decoration: none;
+}
 
 /* Update form */
 .update-form {
@@ -277,7 +286,8 @@ nav button {
   padding: 10px;
 }
 
-.update-form input, textarea {
+.update-form input,
+textarea {
   border: none;
 }
 
@@ -298,7 +308,6 @@ nav button {
   resize: none;
   width: 100%;
 }
-
 
 /* Dashboard Cards */
 .greeting {
@@ -334,7 +343,6 @@ nav button {
   color: grey;
 }
 
-
 /* Dashboard user options */
 .user-options {
   border: 1px solid;
@@ -344,7 +352,6 @@ nav button {
   display: flex;
   flex-direction: column;
 }
-
 
 /* Contact Form */
 
@@ -435,7 +442,6 @@ input {
   width: 100%;
   margin-bottom: 10px;
 }
-
 
 /* Dashboard Single Inquiries */
 
@@ -548,7 +554,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 2048px) { 
+@media only screen and (max-width: 2048px) {
   .intro {
     width: 800px;
   }
@@ -558,13 +564,14 @@ footer {
     left: 30%;
   }
 
-  .port-img, .port-img img {
+  .port-img,
+  .port-img img {
     width: 200px;
     height: 200px;
   }
 }
 
-@media only screen and (min-width: 1700px) { 
+@media only screen and (min-width: 1700px) {
   .intro {
     width: 800px;
   }
@@ -574,24 +581,34 @@ footer {
     margin-top: 7px;
   }
 
-  .port-img, .port-img img {
+  .port-img,
+  .port-img img {
     width: 320px;
     height: 320px;
   }
+
+  #grid-container {
+    width: 95%;
+  }
 }
 
-@media only screen and (max-width: 1700px) { 
+@media only screen and (max-width: 1700px) {
   .intro {
     width: 800px;
   }
 
-  .port-img, .port-img img {
+  .port-img,
+  .port-img img {
     width: 220px;
     height: 220px;
   }
+
+  .project-cards {
+    width: calc(50% - 20px);
+  }
 }
 
-@media only screen and (max-width: 1200px) { 
+@media only screen and (max-width: 1200px) {
   .inner {
     flex-direction: column-reverse;
   }
@@ -604,7 +621,18 @@ footer {
     left: 50%;
     transform: translateX(-50%);
   }
-  
+
+  .project-cards {
+    width: 100%;
+  }
+
+  .card-image {
+    height: 220px;
+  }
+
+  .card-image img {
+    height: 220px;
+  }
 }
 
 @media only screen and (max-width: 968px) {
@@ -620,8 +648,8 @@ footer {
   }
 
   .card {
-    flex-basis: calc(50% - 10px); 
-    max-width: calc(50% - 10px); 
+    flex-basis: calc(50% - 10px);
+    max-width: calc(50% - 10px);
   }
 
   .port-name-title {
@@ -648,8 +676,34 @@ footer {
   }
 
   .loginBtn {
-    top: 5px; 
-    right: 20px
+    top: 5px;
+    right: 20px;
+  }
+
+  .project-cards {
+    width: 100%;
+    height: 315px;
+  }
+
+  .card-image {
+    height: 150px;
+  }
+
+  .card-image img {
+    height: 150px;
+  }
+
+  .outer-link {
+    top: -2px;
+  }
+
+  .link {
+    padding: 7px;
+  }
+
+  #na {
+    font-size: 13px;
+    
   }
 
   .form-container {
@@ -750,7 +804,8 @@ footer {
   }
 
   /* Success Page */
-  .success, .failure {
+  .success,
+  .failure {
     width: 350px !important;
     font-size: 14px;
   }
@@ -770,7 +825,8 @@ footer {
     height: 250px;
   }
 
-  .port-img, .port-img img {
+  .port-img,
+  .port-img img {
     height: 200px;
     width: 200px;
   }
