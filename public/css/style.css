@@ -355,14 +355,36 @@ textarea {
 
 /* Contact Form */
 
+.bottom {
+  margin: 50px 175px;
+  display: flex;
+}
+
+.email-me {
+  text-align: center;
+  width: 50%;
+}
+
+.email-me h3 {
+  margin-top: 105px;
+}
+
+.email-me a {
+  color: black;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 7px;
+  background-color: #2196f3;
+}
+
 .form-container {
-  border: none;
   width: 90%;
-  max-width: 800px;
+  max-width: 600px;
   padding: 10px;
   position: relative;
   border-radius: 7px;
-  left: 50%;
+  left: 25%;
+  top: 15px;
   transform: translateX(-50%);
   text-align: center;
   margin-bottom: 30px;
@@ -373,7 +395,9 @@ textarea {
 #emailAddress,
 #name,
 #message {
-  border-radius: 5px;
+  border-radius: 0;
+  border-bottom: 1px solid !important;
+  border: none;
   outline: none;
   margin-top: 10px;
   width: 90%;
@@ -588,7 +612,7 @@ footer {
   }
 
   #grid-container {
-    width: 95%;
+    width: 90%;
   }
 }
 
@@ -709,6 +733,26 @@ footer {
   .form-container {
     width: 90%;
     padding: 5%;
+    left: 50%;
+    top: 50px;
+  }
+
+  .bottom {
+    flex-direction: column;
+    margin: 0;
+    width: 100vw;
+  }
+
+  .email-me {
+    width: 100%;
+    height: 175px;
+    margin-top: 20px;
+    width: 95%;
+    margin: 20px auto;
+  }
+
+  .email-me h3 {
+    margin-top: 20px;
   }
 
   #message {
@@ -754,11 +798,6 @@ footer {
     width: 100%;
     position: static;
     margin: 10px 0;
-  }
-
-  #grid-container {
-    margin: 0;
-    width: 100vw;
   }
 
   #card-container a {
@@ -817,6 +856,7 @@ footer {
 
   .failure h2 {
     font-size: 19px;
+    width: 100%;
   }
 }
 
