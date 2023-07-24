@@ -323,22 +323,21 @@ textarea {
 }
 
 .card {
-  border: 1px solid #ddd;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
   box-shadow: 0px 0px 10px 5px #b3b3b3;
-  border-radius: 5px;
+  border-radius: 0px;
   overflow: hidden;
   flex-basis: 25%;
   flex-grow: 1;
   position: relative;
   padding: 10px;
   display: inline-block;
-  margin: 10px;
+  margin: 10px 0;
   color: black;
   text-decoration: none;
   height: 315px;
   width: 100%;
-  /* max-width: calc(100% / 4 - 20px); subtract 10px for the margin */
-  padding: 10px;
   z-index: 0;
 }
 
