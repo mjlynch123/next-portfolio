@@ -9,7 +9,7 @@ router.get("/", async (req, res) => {
     const showFooter = "true";
     const user = await User.findByPk(req.session.user_id);
     const project = await Project.findAll();
-    
+
     res.render("homepage", { loggedIn: req.session.loggedIn, user, project, showNav, showFooter });
   } catch (err) {
     console.error(err);
@@ -30,7 +30,7 @@ router.get("/dashboard", async (req, res) => {
     const showFooter = "true";
     const user = await User.findByPk(req.session.user_id);
     const inquiries = await Inquiry.findAll();
-    
+
     res.render("dashboard", {
       loggedIn: req.session.loggedIn,
       user,
@@ -66,7 +66,7 @@ router.post('/newProject', async (req, res) => {
   try {
     console.log(req.body)
     const { project_image, project_name, project_languages, project_description, project_live_url, project_github_link } = req.body;
-    
+
     const newProject = {
       name: project_name,
       languages: project_languages,
@@ -84,12 +84,13 @@ router.post('/newProject', async (req, res) => {
   }
 });
 
-router.get("/project/:id", async (req,res) => {
+router.get("/project/:id", async (req, res) => {
   const showNav = "true";
   const showFooter = "true";
   const project = await Project.findOne({ where: { id: req.params.id } });
   console.log(project);
   res.render("singleProject", { loggedIn: req.session.loggedIn, project, showNav })
+  res.json(project);
 });
 
 router.get("/inquiry/:id", async (req, res) => {
